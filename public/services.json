@@ -1,0 +1,24 @@
+[
+    {
+        "id": 1,
+        "img": "http://myattorneyusa.com/storage/upload/images/family.jpg",
+        "name": "Family Imigration",
+        "price": "1000",
+        "description": "One method of obtaining lawful permanent residency is through a qualifying relative who is either a United States citizen or a lawful permanent resident. United States citizens and lawful permanent residents can help their qualifying foreign relatives in petitioning for lawful permanent residency in the United States and eventually even citizenship. There are different categories family-based immigration."
+    },
+    {
+        "id": 2,
+        "img": "http://myattorneyusa.com/storage/upload/images/work-visa.jpg",
+        "name": "Work Visa",
+        "price": "800",
+        "description": "There is a variety of employment visas available to individuals seeking to come to the United States to work. These visas can be temporary or permanent in nature. At The Law Offices of Grinberg & Segal, PLLC, we strive to provide comprehensive legal services to those wishing to obtain U.S. work visas. No extra berdain or extracharge will be addeded while the visa process."
+    },
+    {
+        "id": 3,
+        "img": "http://myattorneyusa.com/storage/upload/images/students.jpg",
+        "name": "Student Visa",
+        "price": "500",
+        "description": "Foreign students who want to study full time in the United States can do so by applying for an F-1 visa. F-1 Visas allow recipients to study full time at an American college, university, community college, academic high school, private elementary schools, or language school that have approval from the U.S. Citizenship and Immigration Services to admit F-1 students."
+    }
+    
+]
