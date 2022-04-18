@@ -1,0 +1,16 @@
+.blog{
+    padding: 60px 0;
+}
+
+.accordion-button:focus {
+    border-color: crimson;
+    outline: 0;
+    box-shadow: none;
+}
+
+.accordion-button:not(.collapsed) {
+    color: crimson;
+    background-color: lightyellow;
+    box-shadow: inset 0 -1px 0 rgb(255 148 135);
+}
+
