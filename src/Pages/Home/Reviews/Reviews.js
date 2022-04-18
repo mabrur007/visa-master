@@ -14,7 +14,7 @@ const [reviews, setReviews] = useState([]);
     return (
         <div className='container mt-8'>
             <h2 className='text-center'>Clients <span>FeedBack</span></h2>
-            <div className='review-section'>
+            <div className='review-section mt-4'>
                 {
                     reviews.map(review => <Review key={review.id} review={review}></Review>)
                 }

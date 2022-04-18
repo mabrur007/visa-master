@@ -1,0 +1,38 @@
+.about {
+    padding: 50px 0;
+}
+
+.about img {
+    border-radius: 18px;
+}
+
+.about h2 {
+    color: #333333;
+    font-size: 2.8rem;
+    font-weight: 700;
+}
+
+.about p {
+    color: #555555;
+    font-size: 18px;
+    font-weight: 400;
+    text-align: justify;
+    line-height: 1.5;
+    margin-bottom: 0;
+}
+
+@media screen and (max-width: 768px) {
+    .about {
+        text-align: center;
+    }
+    .about img {
+        width: 70%;
+    }
+    .about h2 {
+        font-size: 2rem;
+    }
+    .about p {
+        font-size: 16px;
+        font-weight: 400;
+    }
+}
