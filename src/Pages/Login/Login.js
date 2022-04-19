@@ -25,7 +25,7 @@ const Login = () => {
     const location = useLocation();
     const from = location.state?.from?.pathname || '/';
 
-    //it will show success messagae when user is created and navigate to home
+    //it will show success messagae when user is logged in
     useEffect(() => {
         if (user?.user?.email || googleUser?.user?.email) {
             toast.success('Logged In!', {
