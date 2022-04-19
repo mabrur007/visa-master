@@ -1,9 +1,10 @@
 import React from 'react';
+import Reviews from '../Home/Reviews/Reviews';
 
 const CheckOut = () => {
     return (
         <div>
-            <h2 className='text-center my-5 text-danger'>This is CheckOut page</h2>
+            <Reviews></Reviews>
         </div>
     );
 };
