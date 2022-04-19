@@ -1,12 +1,13 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { Form } from 'react-bootstrap';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
-import { useSignInWithEmailAndPassword, useSignInWithGoogle } from 'react-firebase-hooks/auth';
+import { useSendPasswordResetEmail, useSignInWithEmailAndPassword, useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import auth from '../../firebase_init';
-import toast from 'react-hot-toast';
 import google from '../../images/google.png';
-import './Login.css';
 import Loader from '../Shared/Loader/Loader';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import './Login.css';
 
 const Login = () => {
     const [signInWithEmailAndPassword,
@@ -19,6 +20,8 @@ const Login = () => {
         googleUser,
         googleLoading
     ] = useSignInWithGoogle(auth);
+
+    const [sendPasswordResetEmail, sending] = useSendPasswordResetEmail(auth);
 
     const [validated, setValidated] = useState(false);
     const navigate = useNavigate();
@@ -63,8 +66,21 @@ const Login = () => {
         setValidated(false);
     };
 
+    const emailRef = useRef("");
+    // password reset
+    const resetPassword = async () => {
+        const email = emailRef.current.value;
+        if (email) {
+          await sendPasswordResetEmail(email);
+          toast('New password sent via email');
+        }
+        else {
+          toast('Please enter your email');
+        }
+      }
+
     // Giving Loading Effect 
-    if (loading || googleLoading) {
+    if (loading || googleLoading || sending) {
         return <Loader></Loader>;
     }
 
@@ -78,6 +94,7 @@ const Login = () => {
                             <Form.Group className="mb-3" controlId="validationEmail">
                                 
                                 <Form.Control
+                                    ref={emailRef}
                                     type="email"
                                     name="email"
                                     placeholder="Email Address"
@@ -101,8 +118,9 @@ const Login = () => {
                                     Please, Enter your Password!
                                 </Form.Control.Feedback>
                                 <div className='mt-2'>
-                                    <Link to='/reset-password'>Forgot Password?</Link>
+                                    <button onClick={resetPassword} className='btn btn-link text-dark text-decoration-none' >Reset Password</button>
                                 </div>
+                                <ToastContainer />
                             </Form.Group>
 
                             <button className='btn btn-warning text-white w-100 mb-3 fw-bold fs-5' type="submit">Login</button>
