@@ -15,7 +15,7 @@ const Banner = () => {
                         
                     </p>
                     <Link to='/about'>
-                        <button className="content-btn">Appointment</button>
+                        <button className="content-btn">Learn More</button>
                     </Link>
                 </div>
                 <div className="img-area">
