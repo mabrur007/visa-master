@@ -2,14 +2,15 @@ import React from 'react';
 import './Review.css';
 
 const Review = ({ review }) => {
-    const { img, name, says, ratings } = review;
+    const { img, name, says} = review;
 
     return (
-        <div className='review shadow-lg'>
-            <img src={img} alt="reviewer" />
-            <h4>{name}</h4>
-            <p> {says}</p>
-            <p className='ratings'><span>Ratings:</span> <b>{ ratings}</b></p>
+        <div className="container">
+            <div className='review shadow-lg'>
+                <img src={img} alt="reviewer" />
+                <h4>{name}</h4>
+                <p> {says}</p>
+            </div>
         </div>
     );
 };

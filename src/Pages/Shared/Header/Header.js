@@ -10,7 +10,7 @@ const Header = () => {
     const [user] = useAuthState(auth);
     return (
         <header>
-            <Navbar collapseOnSelect className='bg' expand="lg" sticky="top" variant="dark">
+            <Navbar collapseOnSelect className='bg py-3' expand="lg" sticky="top" variant="dark">
                 <Container>
                     <Navbar.Brand as={Link} to="/">
                     Visa Master

@@ -31,7 +31,7 @@ const Login = () => {
     //it will show success messagae when user is logged in
     useEffect(() => {
         if (user?.user?.email || googleUser?.user?.email) {
-            toast.success('Logged In!', {
+            toast.success('You are logged In!', {
                 duration: 4000,
                 id: 'login'
             });

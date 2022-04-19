@@ -15,7 +15,7 @@ const Service = ({ service }) => {
             <h2 className='mt-3'>{name}</h2>
             <p>Processing Fees: <b>${ price}</b></p>
             <p><small>{description}</small></p>
-            <button onClick={navigateToCheckOut} className='btn btn-warning d-block mx-auto'>Book Appointment</button>
+            <button onClick={navigateToCheckOut} className='btn btn-warning d-block mx-auto'>Check Out</button>
         </div>
         
     );
