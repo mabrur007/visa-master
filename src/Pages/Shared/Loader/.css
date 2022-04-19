@@ -1,0 +1,11 @@
+.loader {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.loader .spinner-border {
+    border: 0.25em solid crimson;
+    border-right-color: transparent;
+}
