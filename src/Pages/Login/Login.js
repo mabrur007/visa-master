@@ -73,7 +73,7 @@ const Login = () => {
             <div className="container">
                 <div className="row justify-content-center">
                     <div className="col-lg-5 col-md-8 px-4">
-                        <Form  noValidate validated={validated} onSubmit={handleLogin}>
+                        <Form noValidate validated={validated} onSubmit={handleLogin}>
                             <h2 className="title">Login</h2>
                             <Form.Group className="mb-3" controlId="validationEmail">
                                 
